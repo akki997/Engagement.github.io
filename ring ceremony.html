@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 30px;
+  margin-top:0px;
+}
+</style>
+</head>
+<style>
+body,h1,h2{font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+p {line-height: 2}
+.bgimg, .bgimg2 {
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+    #demo
+    {
+        background-color: antiquewhite;
+    }
+    #home
+    {
+        
+        background-color: antiquewhite;
+        
+    }
+    h1,h2,h3
+    {
+        color: grey;
+        
+    }
+    
+.bgimg {background-image: url("C:\Users\Mahi PC\Desktop\ak2.jpg")}
+.bgimg2 {background-image: url("C:\Users\Mahi PC\Desktop\cool-slide-background-6561.jpg")}
+</style>
+<body>
+    
+
+<!-- Header / Home-->
+    
+<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">Anmol & Anjali</h1>
+    <h2>Are getting engaged</h2>
+    <h2><b>14.01.2018</b></h2>
+  </div>
+</header>
+
+<!-- Navbar (sticky bottom) -->
+<div class="w3-bottom w3-hide-small">
+  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+    <a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
+    <a href="#us" style="width:25%" class="w3-bar-item w3-button">Anmol & Anjali</a>
+    <a href="#engagement" style="width:25%" class="w3-bar-item w3-button">Engagement</a>
+
+  </div>
+</div>
+
+<!-- About / Jane And John -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
+  <div class="w3-content">
+    <h1 class="w3-center w3-text-grey"><b>Anmol & Anjali</b></h1>
+    <img class="w3-round w3-grayscale-min" src="C:\Users\Mahi PC\Desktop\sikh-wedding.jpg" style="width:100%;margin:32px 0">
+    <p><i>Two loving hearts are getting united and making a promise to be in love forever!
+        Save the date as you're invited to our
+        Engagement!</i>
+    </p><br>
+    <p class="w3-center"><a href="#engagement" class="w3-button w3-black w3-round w3-padding-large w3-large">Engagement details Details</a></p>
+  </div>
+</div>
+
+
+<p id="demo"></p>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 14, 2018 20:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+<!-- Wedding information -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="engagement">
+  <div class="w3-content">
+    <h1 class="w3-text-grey"><b>THE ENGAGEMENT</b></h1>
+    <img class="w3-round-large w3-grayscale-min" src="C:\Users\Mahi PC\Desktop\b.jpg" style="width:100%;margin:64px 0">
+    <div class="w3-row">
+      <div class="w3-half">
+        <h2>When</h2>
+        <p>The Engagement - 14 JAN</p>
+        
+      </div>
+      <div class="w3-half">
+        <h2>Where</h2>
+        <p>Lanvanya Dreams,Peeragarhi</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>KHURANA FAMILY </p>
+</footer>
+<div class="w3-hide-small" style="margin-bottom:32px"> </div>
+
+</body>
+</html>
